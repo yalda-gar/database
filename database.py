@@ -1,16 +1,20 @@
-import sqlite3
-connection = sqlite3.connect("database.db")
-cursor = connection.cursor()
+from flask import Flask, render_template, request
+import sqlite3 
 
-cursor.execute("""
-CREATE TABLE IF NOT EXISTS users (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name TEXT NOT NULL,
-    email TEXT NOT NULL
-)
-""")
+app = Flask(__name__)
 
-connection.commit()
-connection.close()
+def get_db():
+    connection = sqlite3.connect("database.db")
+    connection.row_factory = sqlite3.Row
+    return connection 
 
-print("Database created successfully!") 
+@app.route("/")
+def login():
+    return render_template("login.html")
+
+@app.route("/register")
+def register():
+    return render_template("register.html")
+
+if __name__ == "__main__":
+    app.run(debug=True, port=5001)

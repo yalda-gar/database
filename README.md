@@ -1,59 +1,74 @@
-Projectgegevens 
+## Uitvoering
 
-Naam van het project 
+### 1. Database maken
 
-Database 
+Ik heb een SQLite-database gemaakt met de naam `database.db`.
 
-Beschrijving 
+In de database heb ik een tabel `users` gemaakt. Deze tabel bevat:
 
-Ik ga leren hoe ik een database kan maken en gebruiken met SQL. 
+- `id` - uniek nummer van de gebruiker.
+- `name` - naam van de gebruiker.
+- `email` - e-mailadres van de gebruiker.
 
-Waarom? 
+De `id` wordt automatisch aangemaakt met `AUTOINCREMENT`.
 
-Ik wil meer leren over databases, omdat dit belangrijk is voor Software Development. 
+### 2. Projectstructuur
 
-Randvoorwaarden 
+Ik heb een duidelijke projectstructuur gemaakt met verschillende mappen en bestanden:
 
-AVG: Persoonsgegevens veilig behandelen. 
+- `app.py` - de Flask-applicatie.
+- `database.py` - maakt de database en tabel aan.
+- `templates/` - bevat de HTML-pagina's.
+- `models/` - voor database-gerelateerde onderdelen.
+- `routes/` - voor routes van de applicatie.
+- `tests/` - voor testen.
+- `database.db` - de SQLite-database.
 
-Copyright: Alleen materiaal gebruiken dat ik mag gebruiken. 
+### 3. Loginpagina
 
-Licenties: Rekening houden met softwarelicenties. 
+Ik heb een eenvoudige loginpagina gemaakt met velden voor een gebruikersnaam en wachtwoord.
 
-Wettelijk: Werken volgens de wet. 
+### 4. Registratiepagina
 
-Maatschappelijk: De database veilig en verantwoord gebruiken. 
+Ik heb een registratiepagina gemaakt met velden voor:
 
-Planning 
+- Gebruikersnaam
+- E-mail
+- Wachtwoord
 
-Start: 02-09-2026 
+De registratie wordt via Flask verwerkt.
 
-Einde: 08-09-2026 
+### 5. Database koppelen
 
-Leerdoelen 
+Ik heb Flask gekoppeld aan de SQLite-database met Python en `sqlite3`.
 
-Een database leren maken. 
+Wanneer een gebruiker zich registreert, worden de naam en het e-mailadres opgeslagen in de tabel `users`.
 
-Leren werken met SQL. 
+### 6. Gegevens toevoegen
 
-Tabellen en relaties leren maken. 
+Ik heb de registratie getest met testgegevens. De gegevens werden succesvol opgeslagen in de database.
 
-Oefenen met Git en GitHub. 
+### 7. Testen en fouten oplossen
 
-Motivatie 
+Ik heb de applicatie getest door:
 
-"Elke stap brengt mij dichter bij mijn doel." 
+- De registratiepagina te openen.
+- Een testregistratie te maken.
+- Te controleren of de gegevens in de database stonden.
+- Eventuele problemen met Flask en de database op te lossen.
 
-Kerntaken / Werkprocessen 
+De database gaf na het testen de opgeslagen gebruikersgegevens terug. Hierdoor kon ik controleren dat het opslaan van gegevens werkte.
 
-Database ontwerpen. 
+## Resultaat
 
-Database maken. 
+Het eindresultaat is een werkende Flask-webapplicatie die verbinding maakt met een SQLite-database.
 
-SQL-query's schrijven. 
+De gebruiker kan een registratieformulier invullen en de gegevens worden vervolgens opgeslagen in de database.
 
-Database testen. 
+## Conclusie
 
-Fouten oplossen. 
+Door deze opdracht heb ik geleerd hoe ik een SQLite-database kan maken en hoe ik deze kan gebruiken in een Python Flask-applicatie.
 
- 
+Ik heb ook geleerd hoe ik gegevens kan opslaan met SQL, hoe ik een project kan testen en hoe ik problemen kan oplossen.
+
+Daarnaast heb ik geoefend met Git, GitHub en het maken van een goede projectstructuur.
